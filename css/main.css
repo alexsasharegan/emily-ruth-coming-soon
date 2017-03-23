@@ -1,4 +1,21 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway|Source+Sans+Pro');
+
+@font-face {
+	font-family : 'script';
+	font-style  : normal;
+	src         : url('/css/script.eot');
+	src         : local('script'), url('/css/script.eot') format('embedded-opentype'), url('/css/script.woff') format('woff');
+}
+
+.raleway { font-family : 'Raleway', sans-serif; }
+
+.lato { font-family : 'Lato', sans-serif; }
+
+.src-sans-pro { font-family : 'Source Sans Pro', sans-serif; }
+
+.script { font-family : 'script', serif; }
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -177,30 +194,40 @@ body, html {
 	height : 100%
 }
 
+.d-block { display : block; }
+
+.main {
+	height    : 100%;
+	/*color     : white;*/
+	font-size : 24px;
+}
+
+.footer-text {
+	width     : 100%;
+	font-size : 1rem;
+}
+
 .bg-img {
-	/* Full-screen */
-	height          : 100%;
 	background      : url('/img/bg-emily-white-brick-2-windows.jpg') no-repeat center;
 	background-size : cover;
 	position        : relative;
-	/*color           : white;*/
-	font-family     : "Courier New", Courier, monospace;
-	font-size       : 25px;
 }
 
 .dark-overlay {
+	position   : absolute;
+	top        : 0;
+	left       : 0;
 	height     : 100%;
-	background : rgba(0, 0, 0, .3);
+	width      : 100%;
+	background : rgba(0, 0, 0, .25);
 }
 
-/* Position text in the top-left corner */
 .top-left {
 	position : absolute;
-	top      : 0;
-	left     : 16px;
+	top      : 24px;
+	left     : 24px;
 }
 
-/* Position text in the bottom-left corner */
 .bottom-left {
 	position : absolute;
 	bottom   : 0;
@@ -240,6 +267,7 @@ body, html {
 
 .coming-soon {
 	width      : 100%;
+	padding    : 0 2em;
 	position   : absolute;
 	top        : 25%;
 	left       : 50%;
@@ -249,4 +277,48 @@ body, html {
 
 .coming-soon h1 {
 	margin-bottom : .5em;
+}
+
+.logo {
+	height : 64px;
+}
+
+.btn-sharp {
+	border-radius : 0;
+}
+
+.btn-hollow {
+	background : none;
+	padding    : 12px 22px;
+}
+
+[data-email-me] {
+	font-size  : 16px;
+	min-height : 50px;
+	min-width  : 150px;
+	padding    : 12px;
+}
+
+@media screen and (max-height : 700px) {
+	.logo {
+		height : 48px;
+	}
+	
+	.coming-soon {
+		top     : 40%;
+		padding : 0 1em;
+	}
+	
+	.bottom-left {
+		position : absolute;
+		bottom   : 1em;
+		left     : 0;
+		width    : 100%;
+		padding  : 0 1em;
+	}
+	
+	[data-email-me] {
+		display : block;
+		margin  : 0 auto;
+	}
 }
