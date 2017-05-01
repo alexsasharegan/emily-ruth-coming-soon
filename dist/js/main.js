@@ -114,7 +114,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 		doneText: "EXPIRED"
 	};
 
-	var countdownDate = "May 1, 2017 12:00:00 GMT-0700";
+	var countdownDate = "May 16, 2017 12:00:00 GMT-0700";
 
 	window.countdown = new Countdown(countdownDate);
 

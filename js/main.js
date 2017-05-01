@@ -88,7 +88,7 @@
 		doneText: "EXPIRED",
 	};
 	
-	const countdownDate = "May 1, 2017 12:00:00 GMT-0700";
+	const countdownDate = "May 16, 2017 12:00:00 GMT-0700";
 	
 	window.countdown = new Countdown( countdownDate );
 	
