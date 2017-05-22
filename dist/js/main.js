@@ -137,7 +137,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var datetime = new Date(countdownDate);
 
     if (Date.now() > datetime.getTime()) {
-        datetime.setDate(datetime.getDate() + 1);
+        datetime.setDate(new Date().getDate() + 1);
     }
 
     window.countdown = new Countdown(datetime);

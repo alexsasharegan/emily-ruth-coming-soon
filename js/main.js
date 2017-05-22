@@ -1,5 +1,5 @@
-(function() {
-    'use strict';
+(function () {
+    'use strict'
 
     class Countdown {
         static leftPadZero(t, digits = 2) {
@@ -31,7 +31,7 @@
                 window.clearInterval(this.intervalId)
             }
 
-            return this;
+            return this
         }
 
         countdown() {
@@ -64,8 +64,8 @@
 
         render(t) {
             // format fn
-            const f = Countdown.leftPadZero;
-            const times = [`${t.d}d`, `${f( t.h )}h`, `${f( t.m )}m`, `${f( t.s )}s`]
+            const f = Countdown.leftPadZero
+            const times = [`${t.d}d`, `${f(t.h)}h`, `${f(t.m)}m`, `${f(t.s)}s`]
 
             this.element.innerHTML = times.join(`&nbsp;&nbsp;`)
 
@@ -102,14 +102,14 @@
         }
     }
 
-    const countdownDate = "May 16, 2017 12:00:00 GMT-0700";
+    const countdownDate = "May 16, 2017 12:00:00 GMT-0700"
     let datetime = new Date(countdownDate)
 
     if (Date.now() > datetime.getTime()) {
-        datetime.setDate(datetime.getDate() + 1)
+        datetime.setDate(new Date().getDate() + 1)
     }
 
-    window.countdown = new Countdown(datetime);
+    window.countdown = new Countdown(datetime)
 
-    countdown.start();
-}());
+    countdown.start()
+}())
